@@ -1,4 +1,4 @@
-import Image from "next/image";
+//import Image from "next/image";
 import type { ReactNode } from "react";
 import { StoreProvider } from "./StoreProvider";
 import { Nav } from "./components/Nav";
@@ -6,7 +6,7 @@ import { Nav } from "./components/Nav";
 import "./styles/globals.css";
 import styles from "./styles/layout.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { Button, Col, Container, Row, Image } from "react-bootstrap";
 interface Props {
   readonly children: ReactNode;
 }
@@ -17,7 +17,10 @@ export default function RootLayout({ children }: Props) {
       <html lang="en">
         <body>
           <section className={styles.container}>
+            <Container  fluid>
             <Nav />
+            </Container>
+            
 
             <header className={styles.header}>
               <Image

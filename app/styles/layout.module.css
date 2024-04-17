@@ -35,7 +35,12 @@
   grid-area: footer;
   justify-self: center;
 }
-
+.container{
+  background-image : url("/code.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .nav {
   grid-area: nav;
   display: flex;
@@ -44,6 +49,11 @@
   gap: 8px;
   padding: 8px;
   font-size: calc(10px + 2vmin);
+}
+.img{
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .link:hover {
