@@ -35,20 +35,20 @@
   grid-area: footer;
   justify-self: center;
 }
-.container{
+
+.nav {
+  grid-area: nav;
+  display: flex;
+  align-items: start;
+  justify-content: right;
+  gap: 50px;
+  padding: 8px;
+  font-size: calc(10px + 2vmin);
   background-image : url("/code.jpg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-.nav {
-  grid-area: nav;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 8px;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
 }
 .img{
   background-position: top center;
