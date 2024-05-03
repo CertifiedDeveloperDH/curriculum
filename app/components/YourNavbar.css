@@ -1,4 +1,5 @@
 /* YourNavbar.css */
-.navbar-toggler-icon {
+toggleStyle {
     color: white; /* Set the color of the hamburger icon to white */
+    background-color: white;
   }

@@ -18,23 +18,25 @@ export const Navb = () => {
     backgroundImage: 'url("/code.jpg")',
     backgroundSize: 'cover', // Ensure the image covers the entire Navbar
     position: 'relative', // Ensure that the Navbar content respects z-index
+    minHeight: "100vh",
+    alignItems: "start",
   };
   const toggleStyle = {
     zIndex: '2', // Set a higher z-index for Navbar toggle
   };
 
   return (
-    <Navbar collapseOnSelect expand='lg' style={navbarStyle}>
+    <Navbar collapseOnSelect expand='lg'>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" className= "ms-auto" style={toggleStyle}/>
       <Navbar.Collapse id="responsive-navbar-nav">
         <p className="me-auto">Logo</p>
         <Nav className="ms-auto">
-          <Link
+          <Link className="mr-3"
             href="/"
           >
             Home
           </Link>
-          <Link 
+          <Link className="mr-3"
             href="/aboutme"
           >
             Aboutme
@@ -44,7 +46,7 @@ export const Navb = () => {
           >
             Verify
           </Link>
-          <Link
+          <Link className="mr-3"
             href="/quotes"
           >
             Quotes
