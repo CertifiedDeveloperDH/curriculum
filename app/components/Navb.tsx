@@ -32,22 +32,22 @@ export const Navb = () => {
       <Navbar.Collapse id="responsive-navbar-nav">
         <p className="me-auto">Logo</p>
         <Nav className="ms-auto">
-          <Link style={{marginRight:"3vw"}}
+          <Link style={{marginRight:"3vw",color:"black"}}
             href="/"
           >
             Home
           </Link>
-          <Link style={{marginRight:"3vw"}}
+          <Link style={{marginRight:"3vw", color:"black"}}
             href="/aboutme"
           >
             Aboutme
           </Link>
-          <Link style={{marginRight:"3vw"}} 
+          <Link style={{marginRight:"3vw", color:"black"}} 
             href="/verify"
           >
             Verify
           </Link>
-          <Link
+          <Link style={{color:"black"}}
             href="/quotes"
           >
             Quotes
