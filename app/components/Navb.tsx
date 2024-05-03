@@ -27,26 +27,27 @@ export const Navb = () => {
 
   return (
     <Navbar collapseOnSelect expand='lg'>
+      <img src="/code-brackets.svg" className="me-auto" style={{maxHeight:"3em", maxWidth:"3em"}}/>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" className= "ms-auto" style={toggleStyle}/>
       <Navbar.Collapse id="responsive-navbar-nav">
         <p className="me-auto">Logo</p>
         <Nav className="ms-auto">
-          <Link className="mr-3"
+          <Link style={{marginRight:"3vw"}}
             href="/"
           >
             Home
           </Link>
-          <Link className="mr-3"
+          <Link style={{marginRight:"3vw"}}
             href="/aboutme"
           >
             Aboutme
           </Link>
-          <Link 
+          <Link style={{marginRight:"3vw"}} 
             href="/verify"
           >
             Verify
           </Link>
-          <Link className="mr-3"
+          <Link
             href="/quotes"
           >
             Quotes
