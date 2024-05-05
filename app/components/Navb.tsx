@@ -1,6 +1,6 @@
 "use client";
 "use client";
-
+import React, { useState } from 'react';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Nav from 'react-bootstrap/Nav';
@@ -13,6 +13,14 @@ import './YourNavbar.css'; // Import your custom CSS file
 
 export const Navb = () => {
   const pathname = usePathname();
+
+  const [selectedLink, setSelectedLink] = useState('home');
+
+  const handleSelect = (selectedKey:string|null) => {
+    if (selectedKey !== null){
+      setSelectedLink(selectedKey);
+    }
+  };
 
   const navbarStyle = {
     backgroundImage: 'url("/code.jpg")',
@@ -31,27 +39,30 @@ export const Navb = () => {
     <Navbar.Toggle aria-controls="responsive-navbar-nav" className= "ms-auto" style={toggleStyle}/>
       <Navbar.Collapse id="responsive-navbar-nav">
         <p className="me-auto">Logo</p>
-        <Nav className="ms-auto">
-          <Link style={{marginRight:"3vw",color:"black"}}
+        <Nav className="ms-auto" 
+        activeKey={selectedLink}
+        onSelect={handleSelect}
+        >
+          <Nav.Link style={{marginRight:"3vw",color:"black"}} eventKey = "home" className={selectedLink === "home" ? "selected-link" : ""}
             href="/"
           >
             Home
-          </Link>
-          <Link style={{marginRight:"3vw", color:"black"}}
+          </Nav.Link>
+          <Nav.Link style={{marginRight:"3vw", color:"black"}} eventKey="about" className={selectedLink === "about" ? "selected-link": ""}
             href="/aboutme"
           >
             Aboutme
-          </Link>
-          <Link style={{marginRight:"3vw", color:"black"}} 
+          </Nav.Link>
+          <Nav.Link style={{marginRight:"3vw", color:"black"}} eventKey = "verify" className={selectedLink==="verify" ? "selected-link": ""}
             href="/verify"
           >
             Verify
-          </Link>
-          <Link style={{color:"black"}}
+          </Nav.Link>
+          <Nav.Link style={{color:"black"}} eventKey = "quotes" className={selectedLink==="quotes" ? "selected-link": ""}
             href="/quotes"
-          >
+            >
             Quotes
-          </Link>
+          </Nav.Link>
           </Nav>
       </Navbar.Collapse>
     </Navbar>
