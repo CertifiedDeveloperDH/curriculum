@@ -1,9 +1,0 @@
-/* YourNavbar.css */
-toggleStyle {
-    color: white; /* Set the color of the hamburger icon to white */
-    background-color: white;
-  }
-
-.selected-link{
-  text-decoration: underline !important;
-}
